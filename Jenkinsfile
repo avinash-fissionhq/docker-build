@@ -1,7 +1,7 @@
 node("docker") {
-    docker.withRegistry('<<https://hub.docker.com/r/avinasht/docker-build/>>', '<<docker-test>>') {
+    docker.withRegistry('https://hub.docker.com/r/avinasht/docker-build/', 'docker-test') {
     
-        git url: "<<https://github.com/avinash-fissionhq/docker-build.git>>", credentialsId: '<<avinash-git>>'
+        git url: "https://github.com/avinash-fissionhq/docker-build.git", credentialsId: 'avinash-git'
     
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
