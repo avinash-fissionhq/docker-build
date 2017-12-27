@@ -1,5 +1,5 @@
 node("docker") {
-    docker.withRegistry('https://hub.docker.com/r/avinasht/docker-build/', 'docker-test') {
+    docker.withRegistry('https://hub.docker.com/r/avinasht/docker-build/', 'docker') {
     
         git url: "https://github.com/avinash-fissionhq/docker-build.git", credentialsId: 'avinash-git'
     
